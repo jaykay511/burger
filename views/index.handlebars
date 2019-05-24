@@ -1,0 +1,30 @@
+<img src="../public/assets/img/burgerwaiter.jpg" alt="Server with burger">
+
+<h1>Eat Da Burger!</h1>
+
+<ul>
+  {{#each burgers}}
+  <li>{{id}} {{burger_name}}</li>
+  <button type="button">Devour it!</button>
+  {{/each}}
+</ul>
+
+<ul>
+  {{#each burgers}}
+    {{#if devoured}}
+      
+    {{/if}}
+  {{/each}}
+</ul>
+
+<form class="create-form">
+
+  <div class="form-group">
+    <input type="text" id="newburg" name="newburg">
+  </div>
+
+  <button type="submit">Submit</button>
+
+</form>
+
+<h3>Enter a burger you wish to eat and click the "Submit" button.</h3>
