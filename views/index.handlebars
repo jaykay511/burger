@@ -1,19 +1,22 @@
-<img src="../public/assets/img/burgerwaiter.jpg" alt="Server with burger">
+<img src="/assets/img/burgerwaiter.jpg" alt="Server with burger" id="waiterimg">
+
 
 <h1>Eat Da Burger!</h1>
 
 <ul>
   {{#each burgers}}
-  <li>{{id}} {{burger_name}}</li>
-  <button type="button">Devour it!</button>
+  {{#unless devoured}}
+  <li>{{this.id}}. {{this.burger_name}}</li>
+  <button class="devour" data-id="{{id}}" data-devoured="{{devoured}}">Devour it!</button>
+  {{/unless}}
   {{/each}}
 </ul>
 
 <ul>
   {{#each burgers}}
-    {{#if devoured}}
-      
-    {{/if}}
+  {{#if devoured}}
+  <li>{{this.id}}. {{this.burger_name}}</li>
+  {{/if}}
   {{/each}}
 </ul>
 
@@ -23,7 +26,7 @@
     <input type="text" id="newburg" name="newburg">
   </div>
 
-  <button type="submit">Submit</button>
+  <button type="submit" class="addburg">Submit</button>
 
 </form>
 
