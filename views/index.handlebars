@@ -3,7 +3,9 @@
 
 <h1>Eat Da Burger!</h1>
 
-<ul>
+<div class="container">
+
+<ul class="left">
   {{#each burgers}}
   {{#unless devoured}}
   <li>{{this.id}}. {{this.burger_name}}</li>
@@ -12,7 +14,7 @@
   {{/each}}
 </ul>
 
-<ul>
+<ul class="right">
   {{#each burgers}}
   {{#if devoured}}
   <li>{{this.id}}. {{this.burger_name}}</li>
@@ -20,7 +22,7 @@
   {{/each}}
 </ul>
 
-<form class="create-form">
+<form class="create-form center">
 
   <div class="form-group">
     <input type="text" id="newburg" name="newburg">
@@ -30,4 +32,5 @@
 
 </form>
 
-<h3>Enter a burger you wish to eat and click the "Submit" button.</h3>
+<h3 class="center">Enter a burger you wish to eat and click the "Submit" button.</h3>
+</div>

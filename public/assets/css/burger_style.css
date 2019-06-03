@@ -12,3 +12,25 @@ body {
 h1 {
     text-align: center;
 }
+
+.center {
+    text-align: center;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.create-form {
+    clear: both;
+}
+
+li {
+    background: beige;
+    padding: 10px;
+    margin: 10px;
+}
